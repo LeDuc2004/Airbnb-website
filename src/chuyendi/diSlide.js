@@ -28,7 +28,7 @@ export const diSlide = createSlice({
   });
 
   export const fetchDi = createAsyncThunk("di/fetchDi", async (id) => {
-    const res = await fetch(`https://api-airbnb-users.onrender.com/chuyendi/${id}`);
+    const res = await fetch(`https://api-airbnb-users.nrender.com/chuyendi/${id}`);
     let data = await res.json();
     return data;
   });
@@ -36,7 +36,7 @@ export const diSlide = createSlice({
   export const fetchAddDi = createAsyncThunk("di/fetchAddDi", async (sp) => {
 
 
-    const res = await fetch(`https://api-airbnb-users.onrender.com/chuyendi/${localStorage.getItem("ldsjfldlsf...")}`, {
+    const res = await fetch(`https://api-airbnb-users.nrender.com/chuyendi/${localStorage.getItem("ldsjfldlsf...")}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -50,7 +50,7 @@ export const diSlide = createSlice({
   export const fetchDeleteDi = createAsyncThunk("di/fetchDeleteDi", async (sp) => {
 
 
-    const res = await fetch(`https://api-airbnb-users.onrender.com/chuyendi/${localStorage.getItem("ldsjfldlsf...")}`, {
+    const res = await fetch(`https://api-airbnb-users.nrender.com/chuyendi/${localStorage.getItem("ldsjfldlsf...")}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
