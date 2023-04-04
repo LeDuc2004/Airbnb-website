@@ -1,0 +1,109 @@
+.Chuyendi{
+  width: 90%;
+  margin: 0 5%;
+  margin-bottom: 100px;
+  .chuyendi-sun{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 200px;
+    margin: 15px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.422);
+    .chuyendi-sun-img{
+        width: 40%;
+        height: 100%;
+        div{
+            width: calc(30% - 1px);
+            margin-left: 1px;
+            height: calc(50% - 1px);
+            margin-bottom: 1px;
+            float: left;
+
+            img{
+                width: 100%;
+                height: 100%;
+                margin-left: 0;
+
+
+            }
+
+        }
+        .li-sm1{
+            border-top-right-radius: 15px;
+            overflow: hidden;
+
+        }
+        .li-sm2{
+            border-bottom-right-radius: 15px;
+            overflow: hidden;
+        }
+        .li-large{
+            width: 70%;
+            height: calc(100% - 1px);  
+            margin-left: 0;              
+            border-bottom-left-radius: 15px;
+            border-top-left-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 10x;
+        }
+    }
+  }
+}
+.empty{
+    margin: 20vh 0;
+}
+.tt-cdsp{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-left: 20px;
+    .cd-tencanho{
+        font-size: x-large;
+        font-weight: 550;
+    }
+    .cd-diadiem{
+        color: black;
+        font-weight: 550;
+    }
+    .cd-date{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+    .cd-chunha{
+        font-size: medium;
+        margin-top: 10px;
+    }
+    .date-text{
+        display: flex;
+        font-weight: 550;
+        font-size: medium;
+    }
+    .cd-date-right{
+        font-size: large;
+    }
+    .cd-date-right{
+        display: flex;
+        font-weight: 550;
+    }
+}
+.chuyendi-btn{
+    width: 20%;
+    display: flex;
+    align-self: start;
+    justify-content: center;
+    div{
+        background-color: #ff385d;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: medium;
+        font-weight: 550;
+        cursor: pointer;
+        padding-top: 12px;
+    }
+}
