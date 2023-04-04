@@ -28,7 +28,7 @@ export const diSlide = createSlice({
   });
 
   export const fetchDi = createAsyncThunk("di/fetchDi", async (id) => {
-    const res = await fetch(`https://api-airbnb-users.nrender.com/chuyendi/${id}`);
+    const res = await fetch(`https://api-airbnb-users.onrender.com/chuyendi/${id}`);
     let data = await res.json();
     return data;
   });
