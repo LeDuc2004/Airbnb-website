@@ -25,7 +25,6 @@ function Body({ elmApi, fnSell }) {
   }, [elmApi]);
 
   let listKhungcanh = useSelector(getKhungcanh);
-  console.log(listKhungcanh);
  
 
 

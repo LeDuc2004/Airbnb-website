@@ -15,7 +15,6 @@ function Chuyendi() {
   }, []);
 
   let listChuyendi = useSelector((state) => state.listphong);
-  console.log(listChuyendi);
   function ShowErrorToast() {
     toast({
       title: "Đã hủy",
@@ -25,7 +24,6 @@ function Chuyendi() {
     });
   }
   function huychuyendi(id) {
-    console.log(id);
     let ttsp = {
       id: listChuyendi.listphong.id,
       listphong: [],

@@ -22,7 +22,6 @@ export const ttuserSlide = createSlice({
     return data;
   });
   export const fetchOption = createAsyncThunk("todos/fetchTodos", async (option) => {
-    console.log(option);
     const res = await fetch(`https://test-api-air.onrender.com/${option}`);
     let data = await res.json();
     return data;

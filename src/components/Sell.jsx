@@ -13,7 +13,6 @@ function Sell() {
   const [totalDays, setTotalDays] = useState(0);
   const [vlchonngay, setVlchonngay] = useState(true);
 
-
   const { id, option } = useParams();
   const dispatch = useDispatch();
 
@@ -34,19 +33,13 @@ function Sell() {
     });
   }
 
-
   useEffect(() => {
-    dispatch(fetchSell([id , option]));
-    dispatch(fetchDi(localStorage.getItem("ldsjfldlsf...")))
+    dispatch(fetchSell([id, option]));
+    dispatch(fetchDi(localStorage.getItem("ldsjfldlsf...")));
   }, []);
 
   let listChuyendi = useSelector((state) => state.listphong);
-  let spdachon = useSelector((state) => state.khungcanhList)
-  console.log(listChuyendi);
-  console.log(spdachon);
-
-
-
+  let spdachon = useSelector((state) => state.khungcanhList);
 
   const handleStartDateChange = (event) => {
     setStartDate(event.target.value);
@@ -57,12 +50,12 @@ function Sell() {
   function datphong() {
     if (startDate == "start" || endDate == "end") {
       setVlchonngay(false);
-      return
-    } if(localStorage.getItem("ldsjfldlsf...")=="nothing"){
-      ShowErrorToast()
-      return
+      return;
     }
-    else {
+    if (localStorage.getItem("ldsjfldlsf...") == "nothing") {
+      ShowErrorToast();
+      return;
+    } else {
       let ttsp = {
         id: listChuyendi.listphong.id,
         listphong: [
@@ -109,8 +102,7 @@ function Sell() {
     <>
       <Header></Header>
       <div className="page-dat">
-      {console.log(spdachon)}
-        {  spdachon.status == "dachon" ? (
+        {spdachon.status == "dachon" ? (
           <>
             <h1>{spdachon.sell.tencanho}</h1>
             <a className="address-sp" href="">
@@ -145,7 +137,9 @@ function Sell() {
               <div className="sell-info-sp">
                 <div className="sell-top">
                   <div className="sell-top-right">
-                    <h2>Toàn bộ căn hộ cho thuê. Chủ nhà {spdachon.sell.tenchunha}</h2>
+                    <h2>
+                      Toàn bộ căn hộ cho thuê. Chủ nhà {spdachon.sell.tenchunha}
+                    </h2>
                     <div>5 khách - 2 phòng ngủ - 3 giường</div>
                     <div>
                       1 phòng tắm đầy đủ và 1 phòng vệ sinh cơ bản riêng
@@ -350,16 +344,13 @@ function Sell() {
                     >
                       Nhận phòng
                     </div>
-                    {console.log(`${new Date().getFullYear()}-${
-                        new Date().getMonth() < 10 ? 0 : ""
-                      }${new Date().getMonth() + 1}-0${new Date().getDate()}`)}
+
                     <input
                       onChange={handleStartDateChange}
                       type="date"
-                      
                       min={`${new Date().getFullYear()}-${
                         new Date().getMonth() < 10 ? 0 : ""
-                      }${new Date().getMonth() + 1}-0${  new Date().getDate()}`}
+                      }${new Date().getMonth() + 1}-0${new Date().getDate()}`}
                     />
                   </div>
                   <div className="traphong">
@@ -433,16 +424,16 @@ function Sell() {
                     Tổng chi phí
                   </div>
                   <div style={{ fontWeight: 550 }}>
-                    ${spdachon.sell.price * totalDays * 0.05 + spdachon.sell.price * totalDays}
+                    $
+                    {spdachon.sell.price * totalDays * 0.05 +
+                      spdachon.sell.price * totalDays}
                   </div>
                 </div>
               </div>
             </div>
           </>
-
- 
         ) : (
-         <>
+          <>
             <h1 className="skeleton"></h1>
             <div className="address-sp skeleton"></div>
             <ul className="dsklfạd">

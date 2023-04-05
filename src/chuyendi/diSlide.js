@@ -9,12 +9,10 @@ export const diSlide = createSlice({
           state.status = "loading";
         })
         .addCase(fetchDi.fulfilled, (state, action) => {
-          console.log(action.payload);
           state.listphong = action.payload;
           state.status = "idle";
         })
         .addCase(fetchAddDi.fulfilled, (state, action) => {
-            console.log(action.payload);
             state.listphong.listphong.unshift(action.payload.listphong[action.payload.listphong.length - 1])
           })
           .addCase(fetchDeleteDi.fulfilled, (state, action) => {

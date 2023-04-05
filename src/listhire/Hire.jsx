@@ -82,7 +82,6 @@ if (dd == "Lâu đài") {
     return ( 
         <>
         <Header hide="none"></Header>
-        {console.log(listHire.listHire)}
         {listHire.listHire.listHire.length == 0 ? (
           
           <div className="empty">
@@ -115,7 +114,6 @@ if (dd == "Lâu đài") {
   
                         <a href="" className="cd-diadiem">
                           {item.diachi}
-                          {console.log(item)}
                         </a>
   
                         <div className="cd-chunha">Chủ nhà {item.tenchunha}</div>

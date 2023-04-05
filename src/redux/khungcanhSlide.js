@@ -52,7 +52,6 @@ export const fetchSell = createAsyncThunk("todos/fetchSell", async (arr) => {
   return obj;
 });
 export const boqua = createAsyncThunk("hire/boqua", async (idsp) => {
-  console.log(idsp);
   const res = await fetch(
     `https://api-1den8.onrender.com/${idsp.option}/${idsp.idsp}`,
     {

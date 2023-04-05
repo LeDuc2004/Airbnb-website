@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect ,memo } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import toast from "./Toast";
@@ -26,7 +26,7 @@ function Header(prov) {
   ]);
 
   useEffect(()=>{
-   console.log();
+
    if (localStorage.getItem("ldsjfldlsf...") == null) {
     localStorage.setItem("ldsjfldlsf..." , "nothing")
    }
@@ -75,7 +75,6 @@ function Header(prov) {
     }
 
     if (passworddn == "") {
-      console.log(1);
       listvalidatedn[1] = false;
       setListvalidatedn([...listvalidatedn]);
     } else {
@@ -144,7 +143,6 @@ function Header(prov) {
       setTogle(true)
     } else {
       setTogle(false)
-      console.log(nameuser);
 
 
     }
@@ -454,7 +452,6 @@ function Header(prov) {
                   document.getElementById("dk-tk").value = ""
                   document.getElementById("dk-mk").value = ""
                   document.getElementById("dk-cdmk").value = ""
-                  console.log(1);
 
                 }}
                 className="fa-solid fa-xmark"
@@ -643,4 +640,4 @@ function Header(prov) {
   );
 }
 
-export default Header;
+export default memo(Header);

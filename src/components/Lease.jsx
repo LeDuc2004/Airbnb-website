@@ -46,7 +46,6 @@ function Lease() {
   } , [])
   
   let listHire = useSelector(state => state.listHire)
-console.log(listHire);
 
   useEffect(() => {
     setDatalease({ ...dataLease, dacdiem: `${checkBox[1]}` });
@@ -97,7 +96,6 @@ console.log(listHire);
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         },
         (error) => {
-          console.log(error);
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
@@ -121,7 +119,6 @@ console.log(listHire);
   }
 
  let listKhungcanh = useSelector((state) => state.khungcanhList)
- console.log(listKhungcanh);
 
   useEffect(() => {
     if (dataLease.img.length == 5 && dataLease.img[0] != "") {
