@@ -44,6 +44,7 @@ function Lease() {
   useEffect(()=>{
     dispatch(fetchHire())
   } , [])
+  
   let listHire = useSelector(state => state.listHire)
 console.log(listHire);
 

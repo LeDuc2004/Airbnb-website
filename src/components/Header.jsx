@@ -25,7 +25,12 @@ function Header(prov) {
     true,
   ]);
 
-
+  useEffect(()=>{
+   console.log();
+   if (localStorage.getItem("ldsjfldlsf...") == null) {
+    localStorage.setItem("ldsjfldlsf..." , "nothing")
+   }
+  } , [])
 
   const dispatch = useDispatch();
   useEffect(()=>{
@@ -83,8 +88,8 @@ function Header(prov) {
         .then((rep) => rep.json())
         .then((listUser) => arr1(listUser));
        function arr1(listUser) {
-        console.log(1);
-                for (let i = 0; i < listUser.length; i++) {
+
+        for (let i = 0; i < listUser.length; i++) {
 
           if (listUser[i].sdt != valuetkdn) {
             listvalidate[2] = false;
@@ -317,12 +322,13 @@ function Header(prov) {
           </div>
           <div className="icon-user">
                 
-            {localStorage.getItem("ldsjfldlsf...") == "nothing" ?<i className="fa-solid fa-circle-user" /> :<img src="https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/9497def4-f609-4fa0-96ba-3466b568d5e4.avif?alt=media&token=9bf73123-6790-42eb-8d0c-b7a6faccf0bd" alt="" /> }
+            {localStorage.getItem("ldsjfldlsf...") == "nothing"  ?<i className="fa-solid fa-circle-user" /> :<img src="https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/9497def4-f609-4fa0-96ba-3466b568d5e4.avif?alt=media&token=9bf73123-6790-42eb-8d0c-b7a6faccf0bd" alt="" /> }
             
           </div>
 
           <div
             style={
+              
               localStorage.getItem("ldsjfldlsf...") == "nothing"
                 ? { display: "" }
                 : { display: "none" }

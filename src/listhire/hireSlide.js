@@ -11,6 +11,7 @@ export const hireSlide = createSlice({
         state.status = "loading";
       })
       .addCase(fetchHire.fulfilled, (state, action) => {
+        console.log(action.payload);
         state.listHire = action.payload;
         state.status = "hire";
       })
@@ -29,6 +30,7 @@ export const fetchHire = createAsyncThunk("hire/fetchHire", async () => {
     `https://api-listhire.onrender.com/listHire/${localStorage.getItem("ldsjfldlsf...")}`
   );
   let data = await res.json();
+  console.log(data);
   return data;
 });
 

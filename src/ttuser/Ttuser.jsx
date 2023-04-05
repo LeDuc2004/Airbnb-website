@@ -12,8 +12,10 @@ function Ttuser() {
     useEffect(()=>{
      dispatch(fetchUsers())
     } , [])
+
     let listUser = useSelector((state) => state.quanliuser)
     console.log(listUser);
+    
     return (  <>
       <Header hide="none"/>
   {listUser.status == "idle" ?      
@@ -21,7 +23,7 @@ function Ttuser() {
         <div className="Ttuser__left">
             <div className="wrappar-img">
                
-   
+   {console.log(Number(localStorage.getItem("ldsjfldlsf...")))}
     <img src={listUser.listuser[Number(localStorage.getItem("ldsjfldlsf..."))].img} alt="" />
     
     
