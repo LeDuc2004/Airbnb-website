@@ -305,15 +305,8 @@ console.log(listHire);
                 <label htmlFor="">Bãi biển</label>
               </div>{" "}
               <div className="checkBox" style={{ display: "flex" }}>
-                <input
-                  onClick={() => setArrow(false)}
-                  checked={checkBox[0] === 3}
-                  onChange={() => {
-                    setChecked([3, "Lâu đài"]);
-                  }}
-                  type="checkbox"
-                />
-                <label htmlFor="">Lâu đài</label>
+
+                
               </div>{" "}
             </div>
           </div>

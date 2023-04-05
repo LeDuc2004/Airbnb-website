@@ -43,6 +43,8 @@ if (dd == "Khung cảnh tuyệt vời") {
   }
   dispatch(boqua({idsp:item.idsp , option:"khungcanh"}))
   dispatch(fetchDeleteHire(ttsp))
+  ShowErrorToast()
+
 }
 if (dd == "Bãi biển") {
   let ttsp = {
@@ -72,6 +74,8 @@ if (dd == "Lâu đài") {
   }
   dispatch(boqua({idsp:item.idsp , option:"laudai"}))
   dispatch(fetchDeleteHire(ttsp))
+  ShowErrorToast()
+
 }
 }
 
