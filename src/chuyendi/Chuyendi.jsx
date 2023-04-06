@@ -91,7 +91,7 @@ function Chuyendi() {
                       </div>
                       <div className="cd-date-right">
                         <div style={{ margin: "0 5px", fontWeight: "500" }}>
-                          Tổng tri phí:
+                          Tổng chi phí:
                         </div>{" "}
                         $
                         {item.price * item.totalDays +
