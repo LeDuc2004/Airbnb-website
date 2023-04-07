@@ -139,7 +139,7 @@ function Lease() {
       if (checkBox[1] == "Khung cảnh tuyệt vời") {
           dispatch(fetchAddHire(hire))
 
-        fetch("https://api-1den8.onrender.com/khungcanh", {
+        fetch("https://levanduc2052004.onrender.com/khungcanh", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -151,7 +151,7 @@ function Lease() {
       if (checkBox[1] == "Bãi biển") {
         dispatch(fetchAddHire(hire))
 
-        fetch("https://api-1den8.onrender.com/baibien", {
+        fetch("https://levanduc2052004.onrender.com/baibien", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -162,7 +162,7 @@ function Lease() {
       }
       if (checkBox[1] == "Lâu đài") {
         dispatch(fetchAddHire(hire))
-        fetch("https://api-1den8.onrender.com/laudai", {
+        fetch("https://levanduc2052004.onrender.com/laudai", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -301,7 +301,8 @@ function Lease() {
                   type="checkbox"
                 />
                 <label htmlFor="">Bãi biển</label>
-              </div>{" "}
+              </div>
+
               <div className="checkBox" style={{ display: "flex" }}>
 
                 

@@ -1550,6 +1550,14 @@ display: none;
     margin-top: 50px;
     padding-bottom: 10px;
   }
+  .info-user{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 15px;
+  }
 }
 
 

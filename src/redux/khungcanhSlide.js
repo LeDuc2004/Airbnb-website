@@ -30,20 +30,20 @@ export const khungcanhSlide = createSlice({
 });
 
 export const fetchTodos = createAsyncThunk("todos/fetchTodos", async () => {
-  const res = await fetch("https://api-1den8.onrender.com/khungcanh");
+  const res = await fetch("https://levanduc2052004.onrender.com/khungcanh");
   let data = await res.json();
   return data;
 });
 export const fetchOption = createAsyncThunk(
   "todos/fetchTodos",
   async (option) => {
-    const res = await fetch(`https://api-1den8.onrender.com/${option}`);
+    const res = await fetch(`https://levanduc2052004.onrender.com/${option}`);
     let data = await res.json();
     return data;
   }
 );
 export const fetchSell = createAsyncThunk("todos/fetchSell", async (arr) => {
-  const res = await fetch(`https://api-1den8.onrender.com/${arr[1]}`);
+  const res = await fetch(`https://levanduc2052004.onrender.com/${arr[1]}`);
   let data = await res.json();
   let obj = {
     data,
@@ -53,7 +53,7 @@ export const fetchSell = createAsyncThunk("todos/fetchSell", async (arr) => {
 });
 export const boqua = createAsyncThunk("hire/boqua", async (idsp) => {
   const res = await fetch(
-    `https://api-1den8.onrender.com/${idsp.option}/${idsp.idsp}`,
+    `https://levanduc2052004.onrender.com/${idsp.option}/${idsp.idsp}`,
     {
       method: "DELETE",
       headers: {
