@@ -387,13 +387,13 @@ function Header(prov) {
               >
                 <div className="form-ul">
                   <Link to={"/information"}
-                    onClick={() => setMangbocdn([0, true])}
+
                     style={{ fontWeight: "550", color: "black" }}
                   >
                     Thông tin tài khoản
                   </Link>
                   <Link to={"/chuyendi"}
-                    onClick={() => setMangbocdn([0, true])}
+
                     style={{ fontWeight: "550", color: "black" }}
                   >
                     Chuyến đi
